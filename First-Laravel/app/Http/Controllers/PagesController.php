@@ -20,6 +20,7 @@ class PagesController extends Controller {
     
     //Primary root directories
     public function home () {return view('home');}
+    public function movies () {return view('movies');}
     public function aboutUs () {return view('about-us');}
     
     //Laravel directories

@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang = "en">
+@extends('assets/layouts/master')
 
-    <head>
-        <meta charset = "utf-8">
-        <title>Home</title>
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href = "">
-        <link rel = "icon" type = "image/x-icon" href=""/>
-    </head>
+@section('masthead')
 
-    <body>
-        <header>Home: this will be the main and root page.</header>
-        <main></main>
-        <footer></footer>
-    </body>
+    <h1 class = "mx-auto my-0 text-uppercase">Home</h1>
+    <h2 class = "text-white-50 mx-auto mt-2 mb-5">Home page, change this anytime soon</h2>
+    <a class = "btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
 
-</html>
+@endsection
+
+@section('content')
+
+    <h1>Home: this will be the main and root page.</h1>
+
+@endsection

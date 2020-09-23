@@ -25,6 +25,43 @@ use Illuminate\Support\Facades\Route;
             - Finds 'PagesController.php' then executes index().
 */
 
+//Roots
+    Route::get('/', 'PagesController@home');
+    Route::get('/movies', 'PagesController@movies');
+    Route::get('/about-us', 'PagesController@aboutUs');
+
+
+
+
+    //Route::get('/sign-up', 'SignUpController@index'); <- Non-existent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Activity 1: September 10, 2020
     Route::get('/activities/route/1', function () {return view('activity-1-routes/route-1');});
     Route::get('/activities/route/2', 'ActivitiesController@route2');
@@ -39,9 +76,3 @@ use Illuminate\Support\Facades\Route;
 
 //Activity 2: September 13, 2020
     Route::get('/activities/database-querying', 'ActivitiesController@averages');
-
-    //ABOUT
-    Route::get('/', 'PagesController@home');
-    Route::get('/about-us', 'PagesController@aboutUs');
-    //SIGN UP
-    Route::get('/sign-up', 'SignUpController@index');
