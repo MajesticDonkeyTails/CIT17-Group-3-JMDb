@@ -1,6 +1,8 @@
-September 23, 2020:
+Changelog: September 22, 2020:
+	- Initial migration files added for an activity submission.
+
+Changelog: September 23, 2020:
 	- Uploaded the entirety of Mark's laravel folder (the movie site and database).
 	- Added the general layout, named master.blade.php (located in the ./resources/views/assets folder).
 
-Pending / undecided:
-	- Redownload necessary css and js libraries and remove CDNs.
+

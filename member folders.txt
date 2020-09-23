@@ -5,3 +5,9 @@ First-Laravel		Alamag, Mark Joseph B.
 			-
 			-
 			-
+
+
+
+Pending / undecided:
+	- Redownload necessary css and js libraries and remove CDNs.
+	- In the future, try to submit screenshots of the site (side by side with the database for additional proof).
