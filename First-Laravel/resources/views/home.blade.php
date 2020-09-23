@@ -1,4 +1,4 @@
-@extends('assets/layouts/master')
+@extends('/layouts/master')
 
 @section('masthead')
 

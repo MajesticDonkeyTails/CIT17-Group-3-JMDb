@@ -28,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 //Roots
     Route::get('/', 'PagesController@home');
     Route::get('/movies', 'PagesController@movies');
+    Route::get('/movies/create', 'PagesController@moviesCreate');
+    Route::get('/movies/{id}', 'PagesController@moviesShow');
     Route::get('/about-us', 'PagesController@aboutUs');
 
 

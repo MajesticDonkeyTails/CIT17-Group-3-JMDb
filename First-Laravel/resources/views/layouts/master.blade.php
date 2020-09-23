@@ -14,7 +14,7 @@
         <link rel = "icon" type = "image/x-icon" href = "" />
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href = "./css/styles.css" rel = "stylesheet" />
+        <link href = "{{ asset('./css/styles.css') }}" rel = "stylesheet" />
     </head>
     
     <body id = "page-top">
@@ -62,7 +62,7 @@
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         
         <!-- Core theme JS-->
-        <script src = "./js/scripts.js"></script>
+        <script src = "{{ asset('./js/scripts.js') }}"></script>
         
     </body>
     

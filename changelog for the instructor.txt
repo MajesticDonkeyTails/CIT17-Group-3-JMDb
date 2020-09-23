@@ -1,0 +1,14 @@
+Changelog: September 22, 2020:
+	- Initial migration files added for an activity submission.
+
+Changelog: September 23, 2020:
+	- Uploaded the entirety of Mark's laravel folder (the movie site and database).
+	- Added the general layout, named master.blade.php (located in the ./resources/views/assets folder).
+	- Unimplemented CRUD operations:
+		- SELECT /movies			- A page to display all movies in list form.
+		- SELECT /movies/{id}			- A page to display a movie alone in reference to its id.
+		- INSERT /movies/create			- A page to create a movie, filling in the required details.
+		- UPDATE /movies/modify			- A page to modify a movie, editing some details.
+		- DELETE /movies/delete			- A page to confirm movie deletion.
+
+

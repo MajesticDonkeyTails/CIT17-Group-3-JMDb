@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Movie;
 use Illuminate\Http\Request;
 
 /*
@@ -20,10 +21,23 @@ class PagesController extends Controller {
     
     //Primary root directories
     public function home () {return view('home');}
-    public function movies () {return view('movies');}
+    public function movies () {
+        $movies = Movie::all();
+        
+        return view('movies/index', compact('movies'));
+    }
     public function aboutUs () {return view('about-us');}
     
-    //Laravel directories
+    //Movies
+    public function moviesCreate() {
+        return view('movies/create');
+    }
+    public function moviesShow($id) {
+        $movie = Movie::findOrFail($id);
+        return view('movies/show', compact('movie'));
+    }
+    
+    //Unused laravel directories
     public function index () {return view('welcome');}
     
 }
