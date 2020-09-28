@@ -7,20 +7,6 @@ use Illuminate\Http\Request;
 
 //NOTE: This controller will contain every activity from the canvas site in accordance to screenshotting proofs
 
-/*
-    - This php file is "the one that will give you your page".
-    - This php file helps declutter the growing line of codes located in "First-Laravel/routes/web.php"
-    
-    - To create new components, open Laravel's terminal and enter:
-        > php artisan make:
-        - several options will appear for which component is to be installed.
-        - to create compontents, the terminal must have its directory set to the main project folder (.../www/First-Laravel).
-    - Naming convention: controller component
-        - <capital plural word> + 'Controller.php'
-        > UsersController.php
-        > CatsController.php
-*/
-
 class ActivitiesController extends Controller {
     
     //September 10, 2020 - Routes

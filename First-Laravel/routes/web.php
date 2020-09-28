@@ -28,12 +28,21 @@ use Illuminate\Support\Facades\Route;
 //Roots
     Route::get('/', function () {return view('home');});
 
-//Login
-    Route::get('/login', 'PagesController@login_index')->name('login');
-    Route::post('/login', 'PagesController@login_log');
+//LOGIN AND USERS
+    Route::get('/login', 'AuthenticationsController@index')->name('login');
+    Route::post('/login', 'AuthenticationsController@login');
+    Route::middleware(['auth'])->group(function () {
+        Route::get('/logout', 'AuthenticationsController@logout');
+        Route::get('/dashboard', 'DashboardsController@index');
+    });
+        
 
-//Users
-    Route::post('/dashboard', 'PagesController@dashboard_index');
+/*
+Alternative declutter
+Route::middleware(['auth'])->group(function () {
+    
+});
+*/
 
 
 

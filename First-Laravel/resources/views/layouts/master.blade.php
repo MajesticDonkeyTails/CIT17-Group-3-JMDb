@@ -57,8 +57,8 @@
                             </ul>
                         </li>
                         <br/>
-                        <li><a href = "#">Login</a></li>
-                        <li><a href = "#">Register</a></li>
+                        <li><a href = "#">Log In</a></li>
+                        <li><a href = "#">Sign Up</a></li>
                     </ul>
 
                     <div class = "footer">
@@ -125,33 +125,21 @@
         
         <!-- Custom -->
         <script>
-        (function($) {
+            (function($) {
+                "use strict";
+                var fullHeight = function () {
+                    $('.js-fullheight').css('height', $(window).height());
+                    $(window).resize(function(){
+                        $('.js-fullheight').css('height', $(window).height());
+                    });
+                };
+                fullHeight();
 
-	"use strict";
-
-	var fullHeight = function() {
-
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
-
-	};
-	fullHeight();
-
-	$('#sidebarCollapse').on('click', function () {
-      $('#sidebar').toggleClass('active');
-  });
-
-})(jQuery);
-            
-            
-            /*
-            
-             about:
-          This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-            
-            */
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            })(jQuery);
+            /*This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>*/
         </script>
         
     

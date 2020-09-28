@@ -9,6 +9,7 @@
 
 @section('content')
 
-    <h2>Hello user.</h2>
+    <h2>Hello {{ auth()->user()->username }}.</h2>
+    <a href = "/logout">Logout</a>
     
 @endsection

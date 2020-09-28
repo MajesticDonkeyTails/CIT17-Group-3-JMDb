@@ -12,4 +12,7 @@ Changelog: September 23, 2020:
 		- DELETE /movies/delete			- A page to confirm movie deletion.
 	- Added movie record creation page.
 
-
+Changelog: September 28, 2020:
+    - Navigation overhaul.
+    - A somewhat functioning login form is created.
+    - Controller cleanup.

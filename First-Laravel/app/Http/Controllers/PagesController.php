@@ -2,44 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
 use App\Movie;
 use Illuminate\Http\Request;
 
-/*
-    Nick notes:
-    - This is a controller created to help declutter the web.php file located in "First-Laravel/routes/".
-    - All created php and html files for display are located in "First-Laravel/resources/views/".
-        - CSS design and JS programming galore!
-    
-    - Naming convention: views
-        > <lowercase words> + "blade.php"
-        > hello-world.blade.php
-        > about-us.blade.php
-*/
-
 class PagesController extends Controller {
     
-    //Login
-    public function login_index () {
-        return view('login');
-    }
-    public function login_log () {
-        request()->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
-        $credentials = [
-            'email' => request()->email,
-            'password' => request()->password,
-        ];
-        if (Auth::attempt($credentials)) {
-            return "Logged In";
-        }
-        return back()->withErrors([
-            'credentials' => 'Incorrect email or password.'
-        ]);
-    }
     
     public function dashboard_index () {
         return view('dashboard');
