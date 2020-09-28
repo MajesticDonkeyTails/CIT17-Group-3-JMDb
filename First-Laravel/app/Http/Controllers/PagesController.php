@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Movie;
 use Illuminate\Http\Request;
 
@@ -19,13 +20,34 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller {
     
-    //Primary root directories
-    public function home () {return view('home');}
-    public function movies () {
-        $movies = Movie::all();
-        
-        return view('movies/index', compact('movies'));
+    //Login
+    public function login_index () {
+        return view('login');
     }
+    public function login_log () {
+        request()->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+        $credentials = [
+            'email' => request()->email,
+            'password' => request()->password,
+        ];
+        if (Auth::attempt($credentials)) {
+            return "Logged In";
+        }
+        return back()->withErrors([
+            'credentials' => 'Incorrect email or password.'
+        ]);
+    }
+    
+    public function dashboard_index () {
+        return view('dashboard');
+    }
+    
+    
+    //
+    public function movies () {}
     public function aboutUs () {return view('about-us');}
     
     //Movies

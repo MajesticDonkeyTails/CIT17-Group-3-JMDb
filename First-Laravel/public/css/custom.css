@@ -1,0 +1,18 @@
+/* Navigation */
+    .navbar-brand{
+        font-family: Segoe UI;
+        font-size: 1.5em;
+        font-weight: lighter !important;
+        text-transform: uppercase;
+    }
+    .nav-item{
+        font-family: Segoe UI;
+        font-size: 1em;
+        font-weight: lighter !important;
+        text-transform: uppercase;
+    }
+
+/* Masthead */
+    .masthead h1{
+        font-size: 3em;
+    }

@@ -10,5 +10,6 @@ Changelog: September 23, 2020:
 		- INSERT /movies/create			- A page to create a movie, filling in the required details.
 		- UPDATE /movies/modify			- A page to modify a movie, editing some details.
 		- DELETE /movies/delete			- A page to confirm movie deletion.
+	- Added movie record creation page.
 
 

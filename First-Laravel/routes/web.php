@@ -1,5 +1,6 @@
 <?php
 
+use App\Movie;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 /*
     Nick notes:
     - The first slash is similar to accessing the root directory (from a URL bar's perspective).
@@ -26,8 +26,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Roots
-    Route::get('/', 'PagesController@home');
-    Route::get('/movies', 'PagesController@movies');
+    Route::get('/', function () {return view('home');});
+
+//Login
+    Route::get('/login', 'PagesController@login_index')->name('login');
+    Route::post('/login', 'PagesController@login_log');
+
+//Users
+    Route::post('/dashboard', 'PagesController@dashboard_index');
+
+
+
+
+
+    Route::get('/movies', function () {
+        $movies = Movie::all();
+        
+        return view('movies/index', compact('movies'));
+    });
     Route::get('/movies/create', 'PagesController@moviesCreate');
     Route::get('/movies/{id}', 'PagesController@moviesShow');
     Route::get('/about-us', 'PagesController@aboutUs');
