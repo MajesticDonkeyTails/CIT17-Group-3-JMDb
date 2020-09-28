@@ -57,8 +57,8 @@
                             </ul>
                         </li>
                         <br/>
-                        <li><a href = "#">Log In</a></li>
-                        <li><a href = "#">Sign Up</a></li>
+                        <li><a href = "{{ url('/login') }}">Log In</a></li>
+                        <li><a href = "{{ url('/sign-up') }}">Sign Up</a></li>
                     </ul>
 
                     <div class = "footer">

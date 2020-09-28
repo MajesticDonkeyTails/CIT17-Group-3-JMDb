@@ -88,69 +88,19 @@ class ActivitiesController extends Controller {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+//Activity 1: September 10, 2020
+    Route::get('/activities/route/1', function () {return view('activity-1-routes/route-1');});
+    Route::get('/activities/route/2', 'ActivitiesController@route2');
+    Route::get('/activities/route/3', 'ActivitiesController@route3');
+    Route::get('/activities/route/4', 'ActivitiesController@route4');
+    Route::get('/activities/route/5', 'ActivitiesController@route5');
+    Route::get('/activities/route/6', 'ActivitiesController@route6');
+
+//Intermission: September 11, 2020
+    Route::get('/activities/quotes/{author}', 'ActivitiesController@filterByAuthor');
+    Route::get('/activities/products', 'ActivitiesController@products');
+
+//Activity 2: September 13, 2020
+    Route::get('/activities/database-querying', 'ActivitiesController@averages');
+*/

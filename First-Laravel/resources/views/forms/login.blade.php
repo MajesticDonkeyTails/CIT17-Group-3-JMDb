@@ -1,4 +1,4 @@
-@extends('/layouts/master')
+@extends('layouts.master')
 
 @section('masthead')
 
@@ -10,15 +10,7 @@
 @section('content')
 
     <form action = "/login" method = "POST">
-        @if ($errors->any())
-            <div class = "alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        @include('layouts.errors')
         @csrf
         <input type = "text" name = "email" required placeholder = "Email Address">
         <input type = "password" name = "password" required placeholder = "Password">

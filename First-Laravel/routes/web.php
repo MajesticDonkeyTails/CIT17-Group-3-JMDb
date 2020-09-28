@@ -28,23 +28,15 @@ use Illuminate\Support\Facades\Route;
 //Roots
     Route::get('/', function () {return view('home');});
 
-//LOGIN AND USERS
-    Route::get('/login', 'AuthenticationsController@index')->name('login');
+//LOGIN, SIGN UP, AND USERS
+    Route::get('/login', 'AuthenticationsController@indexLogin')->name('login');
     Route::post('/login', 'AuthenticationsController@login');
     Route::middleware(['auth'])->group(function () {
         Route::get('/logout', 'AuthenticationsController@logout');
         Route::get('/dashboard', 'DashboardsController@index');
     });
-        
-
-/*
-Alternative declutter
-Route::middleware(['auth'])->group(function () {
-    
-});
-*/
-
-
+    Route::get('/sign-up', 'AuthenticationsController@indexSignUp');
+    Route::post('/sign-up', 'AuthenticationsController@signUp');
 
 
 
@@ -56,50 +48,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/movies/create', 'PagesController@moviesCreate');
     Route::get('/movies/{id}', 'PagesController@moviesShow');
     Route::get('/about-us', 'PagesController@aboutUs');
-
-
-
-
-    //Route::get('/sign-up', 'SignUpController@index'); <- Non-existent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Activity 1: September 10, 2020
-    Route::get('/activities/route/1', function () {return view('activity-1-routes/route-1');});
-    Route::get('/activities/route/2', 'ActivitiesController@route2');
-    Route::get('/activities/route/3', 'ActivitiesController@route3');
-    Route::get('/activities/route/4', 'ActivitiesController@route4');
-    Route::get('/activities/route/5', 'ActivitiesController@route5');
-    Route::get('/activities/route/6', 'ActivitiesController@route6');
-
-//Intermission: September 11, 2020
-    Route::get('/activities/quotes/{author}', 'ActivitiesController@filterByAuthor');
-    Route::get('/activities/products', 'ActivitiesController@products');
-
-//Activity 2: September 13, 2020
-    Route::get('/activities/database-querying', 'ActivitiesController@averages');

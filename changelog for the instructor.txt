@@ -14,5 +14,5 @@ Changelog: September 23, 2020:
 
 Changelog: September 28, 2020:
     - Navigation overhaul.
-    - A somewhat functioning login form is created.
+    - A functioning login form is created.
     - Controller cleanup.
