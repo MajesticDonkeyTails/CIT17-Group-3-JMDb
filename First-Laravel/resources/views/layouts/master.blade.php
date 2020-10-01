@@ -14,11 +14,13 @@
         <link rel = "icon" type = "image/x-icon" href = "" />
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href = "{{ asset('./css/style-1.css') }}" rel = "stylesheet" />
+        <link rel = "stylesheet" href = "{{ asset('./css/style-1.css') }}" />
         
         <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
         <!-- Custom theme CSS -->
+        <link rel = "stylesheet" type = "text/less" href = "{{ asset('./css/custom.less') }}" />
     </head>
     
     <body>
@@ -29,36 +31,36 @@
             <!--NAVIGATION -->
 			<nav id = "sidebar">
 				<div class = "p-4 pt-5">
-                    <a href = "#" class = "img logo rounded-circle mb-5" style = "background-image: url({{ asset('./assets/img/logo.png') }});"></a>
+                    <a href = "#" class = "img logo rounded-circle mb-5" style = "background-image: url({{ asset('./img/bg-012.jpg') }});"></a>
                     <ul class = "list-unstyled components mb-5">
                         <li class = "active">
-                            <a href = "#homeSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle">Home</a>
+                            <a href = "#homeSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Home</a>
                             <ul class = "collapse list-unstyled" id = "homeSubmenu">
-                                <li><a href = "#">Latest News</a></li>
-                                <li><a href = "#">Upcoming</a></li>
+                                <li><a href = "#" class = "sub-link">Latest News</a></li>
+                                <li><a href = "#" class = "sub-link">Upcoming</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href = "#movieSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Movies</a>
+                            <a href = "#movieSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Movies</a>
                             <ul class = "collapse list-unstyled" id = "movieSubmenu">
-                                <li><a href = "#">This Month</a></li>
-                                <li><a href = "#">This Year</a></li>
-                                <li><a href = "{{ url('/movies') }}">All</a></li>
-                                <li><a href = "#">More</a></li>
+                                <li><a href = "#" class = "sub-link">This Month</a></li>
+                                <li><a href = "#" class = "sub-link">This Year</a></li>
+                                <li><a href = "{{ url('/movies') }}" class = "sub-link">All</a></li>
+                                <li><a href = "#" class = "sub-link">More</a></li>
                             </ul>
                         </li>
-                        <li><a href = "#">About</a></li>
+                        <li><a href = "#" class = "link">About</a></li>
                         <li>
-                            <a href = "#externalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">External Sites</a>
+                            <a href = "#externalSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">External Sites</a>
                             <ul class = "collapse list-unstyled" id = "externalSubmenu">
-                                <li><a href = "https://www.imdb.com/">IMDB</a></li>
-                                <li><a href = "https://www.rottentomatoes.com/">Rotten Tomatoes</a></li>
-                                <li><a href = "https://www.metacritic.com/">Metacritic</a></li>
+                                <li><a href = "https://www.imdb.com/" class = "sub-link">IMDB</a></li>
+                                <li><a href = "https://www.rottentomatoes.com/" class = "sub-link">Rotten Tomatoes</a></li>
+                                <li><a href = "https://www.metacritic.com/" class = "sub-link">Metacritic</a></li>
                             </ul>
                         </li>
                         <br/>
-                        <li><a href = "{{ url('/login') }}">Log In</a></li>
-                        <li><a href = "{{ url('/sign-up') }}">Sign Up</a></li>
+                        <li><a href = "{{ url('/login') }}" class = "link">Log In</a></li>
+                        <li><a href = "{{ url('/sign-up') }}" class = "link">Sign Up</a></li>
                     </ul>
 
                     <div class = "footer">
@@ -69,13 +71,15 @@
                         </p>
                     </div>
                 </div>
+                <div class = "bg"></div>
+                <div class = "noise"></div>
             </nav>
 
             <!-- PAGE CONTENT -->
             <div id = "content" class = "p-4 p-md-5">
 
                 <!-- MINIATURE NAVIGATION -->
-                <nav class = "navbar navbar-expand-lg navbar-light bg-light">
+                <nav id = "navbar" class = "navbar navbar-expand-lg">
                     <div class = "container-fluid">
                         <button type = "button" id = "sidebarCollapse" class = "btn btn-primary">
                             <i class = "fa fa-bars"></i>
@@ -92,12 +96,7 @@
                         </div>
                     </div>
                 </nav>
-                
-                <!-- MASTHEAD -->
-                <header>
-                    @yield('masthead')
-                </header>
-                
+
                 <!-- CONTENT -->
                 @yield('content')
             
@@ -114,6 +113,9 @@
         
     </body>
 
+        <!-- Less JS -->
+        <script src = "//cdn.jsdelivr.net/npm/less"></script>
+    
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

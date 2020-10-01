@@ -1,15 +1,79 @@
 @extends('/layouts/master')
 
-@section('masthead')
-
-    <h1 class = "mx-auto my-0 text-uppercase">All About Movies</h1>
-    <h2 class = "text-white-50 mx-auto mt-2 mb-5">See what's new, stay updated.</h2>
-    <a class = "btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
-
-@endsection
-
 @section('content')
 
-    <h1>Home: this will be the main and root page.</h1>
+    <!-- Spotlight -->
+    <div id = "spotlight" class = "container-fluid">
+        <!-- Main -->
+        <div class = "container spotlight">
+            <div class = "row">
+                <div class = "col-lg-12">
+                    <h1>Explore Entertainment</h1>
+                    <h5>Just your other average internet movie database clone</h5>
+                </div>
+            </div>
+        </div>
+        <!-- News header -->
+        <div class = "container news-header">
+            <h4>Latest News |</h4>
+            <a href = "#">See all stories →</a>
+        </div>
+        <!-- News -->
+        <div class = "container news">
+            <div class = "row">
+                <!-- News 1 -->
+                <div class = "news-card-1 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>News 1 →</h6>
+                            <p>October 31, 2020</p>
+                            <p>Sample description text with no context.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 2 -->
+                <div class = "news-card-2 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>News 2 →</h6>
+                            <p>October 31, 2020</p>
+                            <p>Sample description text with no context.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 3 -->
+                <div class = "news-card-3 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>News 3 →</h6>
+                            <p>October 31, 2020</p>
+                            <p>Sample description text with no context.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 4 -->
+                <div class = "news-card-4 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>News 4 →</h6>
+                            <p>October 31, 2020</p>
+                            <p>Sample description text with no context.</p>
+                        </div>
+                    </a>
+                </div>         
+            </div>
+        </div>
+    </div>
+
+    <!-- News -->
+    <div id = "news" class = "container-fluid">
+        <!-- Misc -->
+        <div class = "bg"></div>
+        <div class = "noise"></div>
+    </div>
 
 @endsection

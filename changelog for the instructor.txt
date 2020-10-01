@@ -17,4 +17,8 @@ Changelog: September 28, 2020:
 	- A functioning login form is created.
 	- Controller cleanup.
 	- USer registration added.
+
+Changelog: October 1, 2020
+	- Basic CRUD operations for movies implemented:
+		- Title attribute is only associated with it.
      
