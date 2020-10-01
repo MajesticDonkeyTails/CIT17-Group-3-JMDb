@@ -43,7 +43,7 @@
                             <ul class = "collapse list-unstyled" id = "movieSubmenu">
                                 <li><a href = "#">This Month</a></li>
                                 <li><a href = "#">This Year</a></li>
-                                <li><a href = "#">All</a></li>
+                                <li><a href = "{{ url('/movies') }}">All</a></li>
                                 <li><a href = "#">More</a></li>
                             </ul>
                         </li>

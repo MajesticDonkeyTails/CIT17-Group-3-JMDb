@@ -9,7 +9,7 @@
 
 @section('content')
 
-    <form action = "/login" method = "POST">
+    <form action = "{{ url('/login') }}" method = "POST">
         @include('layouts.errors')
         @csrf
         <input type = "text" name = "email" required placeholder = "Email Address">

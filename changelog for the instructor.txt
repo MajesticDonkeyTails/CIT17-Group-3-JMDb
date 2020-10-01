@@ -13,6 +13,8 @@ Changelog: September 23, 2020:
 	- Added movie record creation page.
 
 Changelog: September 28, 2020:
-    - Navigation overhaul.
-    - A functioning login form is created.
-    - Controller cleanup.
+	- Navigation overhaul.
+	- A functioning login form is created.
+	- Controller cleanup.
+	- USer registration added.
+     
