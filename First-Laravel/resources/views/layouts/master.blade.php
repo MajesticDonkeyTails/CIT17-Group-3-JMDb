@@ -36,17 +36,17 @@
                         <li class = "active">
                             <a href = "#homeSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Home</a>
                             <ul class = "collapse list-unstyled" id = "homeSubmenu">
-                                <li><a href = "#" class = "sub-link">Latest News</a></li>
-                                <li><a href = "#" class = "sub-link">Upcoming</a></li>
+                                <li><a href = "{{ url('/') }}" class = "sub-link">Latest News</a></li>
+                                <li><a href = "{{ url('/') }}" class = "sub-link">Upcoming</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href = "#movieSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Movies</a>
                             <ul class = "collapse list-unstyled" id = "movieSubmenu">
-                                <li><a href = "#" class = "sub-link">This Month</a></li>
-                                <li><a href = "#" class = "sub-link">This Year</a></li>
+                                <li><a href = "{{ url('/movies') }}" class = "sub-link">This Month</a></li>
+                                <li><a href = "{{ url('/movies') }}" class = "sub-link">This Year</a></li>
                                 <li><a href = "{{ url('/movies') }}" class = "sub-link">All</a></li>
-                                <li><a href = "#" class = "sub-link">More</a></li>
+                                <li><a href = "{{ url('/movies') }}" class = "sub-link">More</a></li>
                             </ul>
                         </li>
                         <li><a href = "#" class = "link">About</a></li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Genre;
 use App\Movie;
 use Illuminate\Http\Request;
 
@@ -10,8 +11,9 @@ class MoviesController extends Controller {
     //INDICES
     public function index () {
         $movies = Movie::all();
+        $genres = Genre::all();
         
-        return view('movies.index', compact('movies'));
+        return view('movies.index', compact('movies', 'genres'));
     }
     public function indexCreate () {return view('movies.create');}
     public function indexEdit ($id) {

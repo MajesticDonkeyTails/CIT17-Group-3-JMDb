@@ -38,15 +38,13 @@
 /* Custom bootstrap grid */
     .container{max-width: @sxl;}
 
-                [class *= 'col-']{
-                    padding: 10px;
-                }
-@media(max-width: @xl){
-                [class *= 'col-']{
-                    padding: 5px;
-                }
-}
-/* Navigation */
+    [class *= 'col-']{padding: 10px;}
+    
+    @media(max-width: @xl){
+        [class *= 'col-']{padding: 5px;}
+    }
+
+/* Sidebar navigation */
     #sidebar{
         /*Background*/
         .bg {
@@ -72,6 +70,7 @@
         
         /*Main*/
         background-color: rgba(#000, .75);
+        box-shadow: 0 0 10px 0 #000;
         overflow: hidden;
         position: relative;
         
@@ -100,7 +99,7 @@
         position: relative;
     }
 
-/* Miniature Navbar */
+/* Miniature navigation */
     #navbar {
         /*Main*/
         background-color: rgba(#000, .25);
@@ -121,7 +120,7 @@
         
         /*Main*/
         border: 20px;
-        background-image: url('../img/bg-012.jpg');
+        background-image: url('../img/bg-004.jpg');
         background-position: center center;
         background-size: cover;
         
@@ -152,7 +151,7 @@
         }
         .news-link img{
             width: 100%;
-            border-bottom: 1px solid rgba(#000, .5);
+            border-bottom: 1px rgba(#000, .75) solid
         }
         .news-body{
             background-color: rgba(#000, .8);

@@ -21,4 +21,10 @@ Changelog: September 28, 2020:
 Changelog: October 1, 2020
 	- Basic CRUD operations for movies implemented:
 		- Title attribute is only associated with it.
+
+Changelog: October 2, 2020
+	- Minor design overhaul for general layouts and homepage.
+
+Changelog: October 3, 2020
+	- Eloquent model with one-to-many relationship for movie-genre added.
      

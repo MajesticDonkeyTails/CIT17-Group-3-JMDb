@@ -4,6 +4,7 @@
 
     <!-- Spotlight -->
     <div id = "spotlight" class = "container-fluid">
+        
         <!-- Main -->
         <div class = "container spotlight">
             <div class = "row">
@@ -13,11 +14,13 @@
                 </div>
             </div>
         </div>
+        
         <!-- News header -->
         <div class = "container news-header">
             <h4>Latest News |</h4>
             <a href = "#">See all stories →</a>
         </div>
+        
         <!-- News -->
         <div class = "container news">
             <div class = "row">
@@ -69,11 +72,12 @@
         </div>
     </div>
 
-    <!-- News -->
-    <div id = "news" class = "container-fluid">
-        <!-- Misc -->
-        <div class = "bg"></div>
-        <div class = "noise"></div>
+    <!-- Upcoming -->
+    <div id = "upcoming" class = "container-fluid">
+        <div class = "container news-header">
+            <h4>Upcoming Movies |</h4>
+            <a href = "#">See movies of this month →</a>
+        </div>
     </div>
 
 @endsection

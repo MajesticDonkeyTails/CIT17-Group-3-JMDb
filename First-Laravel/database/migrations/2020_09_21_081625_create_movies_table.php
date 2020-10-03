@@ -18,14 +18,10 @@ class CreateMoviesTable extends Migration
             $table->id();
             
             $table->string('title', 255);
-            $table->date('release_date');
+            $table->date('release_date')->nullable();
             $table->integer('runtime')->nullable();
             $table->text('plot')->nullable();
-            $table->string('age_rating', 255);
-            
-            $table->integer('genre_id');
-            $table->integer('country_id');
-            $table->integer('language_id');
+            $table->string('age_rating', 255)->nullable();
             
             $table->timestamps();
         });
