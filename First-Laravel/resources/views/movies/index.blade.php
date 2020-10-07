@@ -2,53 +2,41 @@
 
 @section('content')
 
-    <div class = "container-fluid">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </div>
+    <div class = "filler-gap container-fluid"></div>
 
-    <div class = "container-fluid">
+    <div id = "movie-list" class = "custom container-fluid">
+        <!-- Header -->
         <div class = "row">
-            <div class = "col-md-12">
-                <a href = "{{ url('/movies/create') }}">Add movie record</a>
-                <table>
-                    <h1>List of Movies</h1>
+            <div class = "col-xl-12">
+                <h3>Movie Table</h3>
+                <p>This section is experimental, be careful when permanently removing a movie record.</p>
+                <a class = "btn-action" href = "{{ url('/movies/create') }}">Add movie record</a>
+            </div>
+        </div>
+        <!-- Table -->
+        <div class = "row">
+            <div class = "col-xl-12">
+                <table class = "movie-table">
                     <thead>
-                        <th>Movie ID</th>
-                        <th>Title</th>
-                        <th>Release Date</th>
-                        <th>Plot / Synopsis</th>
-                        <th>Age Rating</th>
-                        <th>Genres</th>
-                        <th colspan = "2">OPERATIONS</th>
+                        <tr>
+                            <th class = "id">ID</th>
+                            <th class = "title">Title</th>
+                            <th class = "date">Release Date</th>
+                            <th class = "action">Action</th>
+                        </tr>
                     </thead>
                     <tbody>
                         @foreach ($movies as $movie)
                             <tr>
-                                <td>{{ $movie->id }}</td>
-                                <td>{{ $movie->title }}</td>
-                                <td>{{ $movie->release_date }}</td>
-                                <td>{{ $movie->plot }}</td>
-                                <td>{{ $movie->age_rating }}</td>
-                                <td>
-                                    @foreach ($movie->genres as $genre)
-                                        {{ $genre->genre }}
-                                    @endforeach
-                                </td>
-                                <td><a href = "{{ url('/movies/edit', ['id' => $movie->id]) }}">EDIT</a></td>
-                                <td>
+                                <td class = "id">{{ $movie->id }}</td>
+                                <td class = "title">{{ $movie->title }}</td>
+                                <td class = "date">{{ $movie->release_date }}</td>
+                                <td class = "action">
                                     <form action = "{{ url('/movies/remove', ['id' => $movie->id]) }}" method = "POST">
                                         @include('layouts.errors')
                                         @csrf
-                                        <button type = "submit">REMOVE</button>
+                                        <a class = "btn-action" href = "{{ url('/movies/edit', ['id' => $movie->id]) }}">EDIT</a>
+                                        <button class = "btn-action" type = "submit">REMOVE</button>
                                     </form>
                                 </td>
                             </tr>
@@ -58,15 +46,19 @@
             </div>
         </div>
     </div>
-<script>
-/*
-
-                                    @foreach ($genres as $genre)
-                                        @if ($movie->id == $genre->movie_id)
-                                            {{ $genre->genre }}
-                                        @endif
-                                    @endforeach
-*/
-</script>
+    <script>
+    /*
+        <td>
+            @foreach ($movie->genres as $genre)
+                {{ $genre->genre }}
+            @endforeach
+        </td>
+        @foreach ($genres as $genre)
+            @if ($movie->id == $genre->movie_id)
+                {{ $genre->genre }}
+            @endif
+        @endforeach
+    */
+    </script>
 
 @endsection

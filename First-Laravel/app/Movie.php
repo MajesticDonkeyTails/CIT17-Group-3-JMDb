@@ -10,7 +10,11 @@ class Movie extends Model {
     
     //Fillable by the forms
     protected $fillable = [
-        'title'
+        'title',
+        'release_date',
+        'runtime',
+        'plot',
+        'age_rating',
     ];
     
     //

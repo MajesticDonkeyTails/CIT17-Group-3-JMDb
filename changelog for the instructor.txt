@@ -16,7 +16,7 @@ Changelog: September 28, 2020:
 	- Navigation overhaul.
 	- A functioning login form is created.
 	- Controller cleanup.
-	- USer registration added.
+	- User registration added.
 
 Changelog: October 1, 2020
 	- Basic CRUD operations for movies implemented:
@@ -27,4 +27,13 @@ Changelog: October 2, 2020
 
 Changelog: October 3, 2020
 	- Eloquent model with one-to-many relationship for movie-genre added.
+
+Changelog: October 7, 2020
+	- Seeders added:
+		- User (added a default dummy admin)
+		- Movie (added a few movie data)
+	- CSS/Less Layout rework:
+		- Navigation
+		- Movie (main tables)
+		- Movie (edit view)
      

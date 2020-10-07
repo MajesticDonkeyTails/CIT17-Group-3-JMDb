@@ -30,49 +30,49 @@
             
             <!--NAVIGATION -->
 			<nav id = "sidebar">
-				<div class = "p-4 pt-5">
-                    <a href = "#" class = "img logo rounded-circle mb-5" style = "background-image: url({{ asset('./img/bg-012.jpg') }});"></a>
-                    <ul class = "list-unstyled components mb-5">
-                        <li class = "active">
-                            <a href = "#homeSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Home</a>
-                            <ul class = "collapse list-unstyled" id = "homeSubmenu">
-                                <li><a href = "{{ url('/') }}" class = "sub-link">Latest News</a></li>
-                                <li><a href = "{{ url('/') }}" class = "sub-link">Upcoming</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href = "#movieSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Movies</a>
-                            <ul class = "collapse list-unstyled" id = "movieSubmenu">
-                                <li><a href = "{{ url('/movies') }}" class = "sub-link">This Month</a></li>
-                                <li><a href = "{{ url('/movies') }}" class = "sub-link">This Year</a></li>
-                                <li><a href = "{{ url('/movies') }}" class = "sub-link">All</a></li>
-                                <li><a href = "{{ url('/movies') }}" class = "sub-link">More</a></li>
-                            </ul>
-                        </li>
-                        <li><a href = "#" class = "link">About</a></li>
-                        <li>
-                            <a href = "#externalSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">External Sites</a>
-                            <ul class = "collapse list-unstyled" id = "externalSubmenu">
-                                <li><a href = "https://www.imdb.com/" class = "sub-link">IMDB</a></li>
-                                <li><a href = "https://www.rottentomatoes.com/" class = "sub-link">Rotten Tomatoes</a></li>
-                                <li><a href = "https://www.metacritic.com/" class = "sub-link">Metacritic</a></li>
-                            </ul>
-                        </li>
-                        <br/>
-                        <li><a href = "{{ url('/login') }}" class = "link">Log In</a></li>
-                        <li><a href = "{{ url('/sign-up') }}" class = "link">Sign Up</a></li>
-                    </ul>
-
-                    <div class = "footer">
-                        <p>
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script>
-                            All rights reserved
-                        </p>
-                    </div>
+                <!--Logo-->
+                <a class = "logo-link" href = "{{ url('/') }}">
+                    <div class = "logo" style = "background-image: url({{ asset('./img/bg-012.jpg') }});"></div>
+                    <div class = "title">Working Title</div>
+                </a>
+                <!--Links and dropdowns-->
+                <ul class = "links list-unstyled">
+                    <li><a href = "{{ url('/') }}" class = "link">Home</a></li>
+                    <li>
+                        <a href = "#movieSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">Movies</a>
+                        <ul class = "collapse list-unstyled" id = "movieSubmenu">
+                            <li><a href = "{{ url('/movies') }}" class = "sub-link">This Month</a></li>
+                            <li><a href = "{{ url('/movies') }}" class = "sub-link">This Year</a></li>
+                            <li><a href = "{{ url('/movies') }}" class = "sub-link">All</a></li>
+                            <li><a href = "{{ url('/movies') }}" class = "sub-link">More</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href = "#externalSubmenu" data-toggle = "collapse" aria-expanded = "false" class = "dropdown-toggle link">External Sites</a>
+                        <ul class = "collapse list-unstyled" id = "externalSubmenu">
+                            <li><a href = "https://www.imdb.com/" class = "sub-link">IMDB</a></li>
+                            <li><a href = "https://www.rottentomatoes.com/" class = "sub-link">Rotten Tomatoes</a></li>
+                            <li><a href = "https://www.metacritic.com/" class = "sub-link">Metacritic</a></li>
+                        </ul>
+                    </li>
+                    <li><a href = "#" class = "link">About</a></li>
+                </ul>
+                <!--Log in and sign up-->
+                <div class = "account-options">
+                    <a href = "{{ url('/login') }}" class = "btn-action">Log In</a>
+                    <div>or</div>
+                    <a href = "{{ url('/sign-up') }}" class = "btn-action">Sign Up</a>
                 </div>
+                <!--Footer-->
+                <div class = "footer">
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    All rights reserved
+                </div>
+                <!--Misc-->
                 <div class = "bg"></div>
                 <div class = "noise"></div>
+                <div class = "gap"></div>
             </nav>
 
             <!-- PAGE CONTENT -->
@@ -80,34 +80,17 @@
 
                 <!-- MINIATURE NAVIGATION -->
                 <nav id = "navbar" class = "navbar navbar-expand-lg">
-                    <div class = "container-fluid">
-                        <button type = "button" id = "sidebarCollapse" class = "btn btn-primary">
-                            <i class = "fa fa-bars"></i>
-                            <span class = "sr-only">Toggle Menu</span>
-                        </button>
-                        <button class = "btn btn-dark d-inline-block d-lg-none ml-auto" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "false" aria-label = "Toggle navigation">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <div class = "collapse navbar-collapse" id = "navbarSupportedContent">
-                            <ul class = "nav navbar-nav ml-auto">
-                                <li class = "nav-item active"><a class = "nav-link" href = "#">Home</a></li>
-                                <li class = "nav-item"><a class = "nav-link" href = "#">Movies</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <button id = "sidebarCollapse" class = "btn-action">Menu</button>
+                    <a href = "{{ url('/movies') }}" class = "btn-action link-movies">Movies</a>
+                    <a href = "{{ url('/') }}" class = "btn-action link-home">Home</a>
                 </nav>
 
                 <!-- CONTENT -->
                 @yield('content')
-            
-                <!-- FOOTER -->
-                <footer class = "footer bg-black small text-center text-white-50">
-                    <div class = "container">
-                        Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script>
-                            All rights reserved
-                    </div>
-                </footer>
+                
+                <!-- MISCELLANEOUS -->
+                <div class = "bg"></div>
+                <div class = "noise"></div>
             </div>
 		</div>
         
@@ -125,7 +108,7 @@
         <!-- Bootstrap 4 JS -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
-        <!-- Custom -->
+        <!-- Template behavior -->
         <script>
             (function($) {
                 "use strict";
@@ -141,7 +124,6 @@
                     $('#sidebar').toggleClass('active');
                 });
             })(jQuery);
-            /*This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>*/
         </script>
         
     
