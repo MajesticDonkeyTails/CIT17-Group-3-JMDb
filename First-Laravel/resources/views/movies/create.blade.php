@@ -12,12 +12,7 @@
             <div class = "row">
                 <div class = "col-xl-12">
                     <h3>Add Movie Record</h3>
-                    <ul>
-                        Notes:
-                        <li>One-to-many relationship properties (genre, language, country) are not yet implemented.</li>
-                        <li>Strict "number only" input is not yet implemented for runtime and year of release.</li>
-                        <li>A null option for dates are not yet implemented.</li>
-                    </ul>
+                    <br/>
                     <a class = "btn-action" href = "{{ url('/movies') }}">Return To Movie Tables</a>
                 </div>
             </div>

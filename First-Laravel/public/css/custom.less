@@ -49,6 +49,7 @@
         }
         tr{border-bottom: 1px solid rgba(#FFF, .1);}
         tr:nth-child(even){background-color: rgba(#FFF, .05);}
+        tbody tr:hover{background-color: rgba(#FFF, .1);}
         td{
             font-size: 14px;
             font-weight: lighter;
@@ -399,15 +400,19 @@
     #movie-list{
         /*Elements*/
         th.action, td.action{width: 180px;}
+        th.release-date, td.release-date{width: 300px;}
         td.action{
             display: flex;
             justify-content: center;
         }
-        td.id{text-align: center;}
-        th.title, th.date{text-align: left;}
+        td.id, td.age-rating{text-align: center;}
+        th.title, th.date, th.genre{text-align: left;}
         
         /*Adjustments*/
-        @media(max-width: @md){
-            .date{display: none;}
+        @media(max-width: @sxl){
+            .genre{display: none;}
+        }
+        @media(max-width: @xl){
+            .date, .age-rating{display: none;}
         }
     }

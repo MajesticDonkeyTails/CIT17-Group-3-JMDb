@@ -17,7 +17,7 @@ class CreateGenresTable extends Migration
             $table->id();
             
             $table->integer('movie_id');
-            $table->string('genre', 255);
+            $table->string('genre', 255)->nullable();
             
             $table->timestamps();
         });
