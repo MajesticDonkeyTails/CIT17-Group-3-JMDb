@@ -65,6 +65,9 @@
         padding: 10px 30px;
         width: 100%;
     }
+    select {
+        min-width: 2em;
+    }
     textarea {
         background-color: rgba(#FFF, .05);
         border: 1px rgba(#FFF, .1) solid;
@@ -147,11 +150,11 @@
         border-top: 1px rgba(#FFF, .1) solid;
         padding: 30px 10%;
     }
-.no-padding{padding: 0;}
-.centered{
-    display: block;
-    text-align: center;
-}
+    .no-padding{padding: 0;}
+    .centered{
+        display: block;
+        text-align: center;
+    }
 
     .mixin-button-custom(){
         background-color: transparent;
@@ -169,7 +172,7 @@
             color: orange + #111;
         }
     }
-.btn-action{.mixin-button-custom();}
+    .btn-action{.mixin-button-custom();}
 
 /* Sidebar and miniature navigation */
     #sidebar{
@@ -206,7 +209,7 @@
         
         /*Main*/
         background-size: 1px 100%;
-        box-shadow: 0 0 20px 0 #000;
+        box-shadow: 0 0 10px 0 #000;
         overflow: hidden;
         padding: 0;
         position: relative;

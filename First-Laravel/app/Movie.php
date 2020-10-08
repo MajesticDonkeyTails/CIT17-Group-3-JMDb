@@ -16,6 +16,9 @@ class Movie extends Model {
         'plot',
         'age_rating',
     ];
+    protected $dates = [
+        'release_date'
+    ];
     
     //
     public function genres () {

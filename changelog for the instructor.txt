@@ -30,10 +30,21 @@ Changelog: October 3, 2020
 
 Changelog: October 7, 2020
 	- Seeders added:
-		- User (added a default dummy admin)
-		- Movie (added a few movie data)
+		- User (added a default dummy admin).
+		- Movie (added a few movie data).
 	- CSS/Less Layout rework:
-		- Navigation
-		- Movie (main tables)
-		- Movie (edit view)
-     
+		- Navigation.
+		- Movie (main tables).
+		- Movie (edit view).
+
+Changelog: October 8, 2020
+	- The following attributes are now editable for movies:
+		- Dates.
+		- Runtime in minutes.
+		- Age ratings (MPAA).
+		- Plot/synopsis.
+	- The following attributes are now fillable for movie record creation:
+		- Dates.
+		- Runtime in minutes.
+		- Age ratings (MPAA).
+		- Plot/synopsis.

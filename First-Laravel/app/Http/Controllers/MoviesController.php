@@ -27,10 +27,22 @@ class MoviesController extends Controller {
     public function create() {
         //Validate
         $validated_fields = request()->validate([
-            'title' => 'required'
+            'title' => 'required',
+            'date-year' => 'required',
+            'date-month' => 'required',
+            'date-day' => 'required',
+            'runtime' => 'required',
+            'age-rating' => 'required',
+            'plot' => 'required'
         ]);
         //Add user to database
-        $movie = Movie::create($validated_fields);
+        $movie = Movie::create([
+            'title' => $validated_fields['title'],
+            'release_date' => $validated_fields['date-year'].'-'.$validated_fields['date-month'].'-'.$validated_fields['date-day'],
+            'runtime' => $validated_fields['runtime'],
+            'age_rating' => $validated_fields['age-rating'],
+            'plot' => $validated_fields['plot']
+        ]);
         //Redirect
         return redirect('/movies');
     }
@@ -39,10 +51,22 @@ class MoviesController extends Controller {
     public function edit($id) {
         //Validate
         $validated_fields = request()->validate([
-            'title' => 'required'
+            'title' => 'required',
+            'date-year' => 'required',
+            'date-month' => 'required',
+            'date-day' => 'required',
+            'runtime' => 'required',
+            'age-rating' => 'required',
+            'plot' => 'required'
         ]);
         //Update
-        $update = Movie::where('id', $id)->update($validated_fields);
+        $update = Movie::where('id', $id)->update([
+            'title' => $validated_fields['title'],
+            'release_date' => $validated_fields['date-year'].'-'.$validated_fields['date-month'].'-'.$validated_fields['date-day'],
+            'runtime' => $validated_fields['runtime'],
+            'age_rating' => $validated_fields['age-rating'],
+            'plot' => $validated_fields['plot']
+        ]);
         //Redirect
         return redirect('/movies');
     }

@@ -9,7 +9,7 @@
         <div class = "row">
             <div class = "col-xl-12">
                 <h3>Movie Table</h3>
-                <p>This section is experimental, be careful when permanently removing a movie record.</p>
+                <p>This section is experimental, be careful when permanently removing a movie record (no warning prompts implemented yet).</p>
                 <a class = "btn-action" href = "{{ url('/movies/create') }}">Add movie record</a>
             </div>
         </div>
@@ -30,7 +30,7 @@
                             <tr>
                                 <td class = "id">{{ $movie->id }}</td>
                                 <td class = "title">{{ $movie->title }}</td>
-                                <td class = "date">{{ $movie->release_date }}</td>
+                                <td class = "date">{{ $movie->release_date->format('F').' '.$movie->release_date->day.', '.$movie->release_date->year }}</td>
                                 <td class = "action">
                                     <form action = "{{ url('/movies/remove', ['id' => $movie->id]) }}" method = "POST">
                                         @include('layouts.errors')
