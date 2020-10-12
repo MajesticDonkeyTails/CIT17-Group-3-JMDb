@@ -17,7 +17,7 @@ class CreateLanguagesTable extends Migration
             $table->id();
             
             $table->integer('movie_id');
-            $table->string('language', 255);
+            $table->string('language', 255)->nullable();
             
             $table->timestamps();
         });

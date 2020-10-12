@@ -17,7 +17,7 @@ class CreateCountriesTable extends Migration
             $table->id();
             
             $table->integer('movie_id');
-            $table->string('country', 255);
+            $table->string('country', 255)->nullable();
             
             $table->timestamps();
         });

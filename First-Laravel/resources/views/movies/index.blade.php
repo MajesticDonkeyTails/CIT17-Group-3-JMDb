@@ -17,6 +17,10 @@
                         <li>Months with a set day beyond its intended last day will cause invalid date format errors.</li>
                         <li>A null option for date is not yet implemented.</li>
                     </ul>
+                    <ul>
+                        DEV. NOTES:
+                        <li>Debug more of genre checkboxes.</li>
+                    </ul>
                 <a class = "btn-action" href = "{{ url('/movies/create') }}">Add movie record</a>
             </div>
         </div>

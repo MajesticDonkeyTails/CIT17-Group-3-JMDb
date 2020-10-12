@@ -1,6 +1,7 @@
 <?php
 
 use App\Movie;
+use App\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,21 @@ use Illuminate\Support\Facades\Route;
     Route::get('/sign-up', 'AuthenticationsController@indexSignUp');
     Route::post('/sign-up', 'AuthenticationsController@signUp');
 
+//EXPERIMENTAL (for testing purposes)
+    Route::get('/users', function () {
+        $users = User::all();
+        return view('tests.users', compact('users'));
+    });
+    Route::get('/users/update/{id}', function ($id) {
+        $user = Movie::where('id', $id)->get();
+        return view('tests.update', compact('user'));
+    });
+    Route::post('/users/update/{id}', function ($id) {
+        return redirect('/users');
+    });
+    Route::post('/users/delete/{id}', function () {
+        return redirect('/sign-up');
+    });
 
-
+//UNUSED
     Route::get('/about-us', 'PagesController@aboutUs');
