@@ -8,72 +8,79 @@
     }
   }
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laragon</title>
+@extends('/layouts/master')
 
-        <link href="https://fonts.googleapis.com/css?family=Karla:400" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Karla';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-
-            .opt {
-                margin-top: 30px;
-            }
-
-            .opt a {
-              text-decoration: none;
-              font-size: 150%;
-            }
-            
-            a:hover {
-              color: red;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title" title="Laragon">Laragon</div>
-     
-                <div class="info"><br />
-                      <?php print($_SERVER['SERVER_SOFTWARE']); ?><br />
-                      PHP version: <?php print phpversion(); ?>   <span><a title="phpinfo()" href="/?q=info">info</a></span><br />
-                      Document Root: <?php print ($_SERVER['DOCUMENT_ROOT']); ?><br />
-
-                </div>
-                <div class="opt">
-                  <div><a title="Getting Started" href="https://laragon.org/docs">Getting Started</a></div>
+    <!-- Spotlight -->
+    <div id = "spotlight" class = "container-fluid">
+        
+        <!-- Main -->
+        <div class = "container spotlight">
+            <div class = "row">
+                <div class = "col-lg-12">
+                    <h1>Explore Entertainment</h1>
+                    <h5>Just your other average internet movie database clone</h5>
+                    <h5>Please read notes about the website <a href = "{{ url('/about-us') }}" class = "link">here</a>.</h5>
                 </div>
             </div>
-
         </div>
-    </body>
-</html>
+        
+        <!-- News header -->
+        <div class = "container news-header">
+            <h4>Latest News |</h4>
+            <a href = "#">See all stories →</a>
+        </div>
+        
+        <!-- News -->
+        <div class = "container news">
+            <div class = "row">
+                <!-- News 1 -->
+                <div class = "news-card-1 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>Placeholder News 1 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 2 -->
+                <div class = "news-card-2 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>Placeholder News 2 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 3 -->
+                <div class = "news-card-3 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>Placeholder News 3 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- News 4 -->
+                <div class = "news-card-4 col-xl-3 col-sm-6">
+                    <a href = "#" class = "news-link">
+                        <img src = "{{ url('./img/bg-004.jpg') }}">
+                        <div class = "news-body">
+                            <h6>Placeholder News 4 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
+                        </div>
+                    </a>
+                </div>         
+            </div>
+        </div>
+    </div>
+
+@endsection
