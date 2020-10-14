@@ -9,18 +9,7 @@
         <div class = "row">
             <div class = "col-xl-12">
                 <h3>List of Movies</h3>
-                <p>This section is experimental, be careful when permanently removing a movie record (no warning prompts implemented yet).</p>
-                    <ul>
-                        NOTES:
-                        <li>One-to-many relationship properties (genre, language, country) are not yet implemented for recording and editing.</li>
-                        <li>Strict 'number only' input is not yet implemented for runtime and year of release.</li>
-                        <li>Months with a set day beyond its intended last day will cause invalid date format errors.</li>
-                        <li>A null option for date is not yet implemented.</li>
-                    </ul>
-                    <ul>
-                        DEV. NOTES:
-                        <li>Debug more of genre checkboxes.</li>
-                    </ul>
+                <br/>
                 <a class = "btn-action" href = "{{ url('/movies/create') }}">Add movie record</a>
             </div>
         </div>
@@ -42,7 +31,7 @@
                         @foreach ($movies as $movie)
                             <tr title = "{{ $movie->plot }}">
                                 <td class = "id">{{ $movie->id }}</td>
-                                <td class = "title">{{ $movie->title }}</td>
+                                <td class = "title"><a href = "{{ url('/movies/view', ['id' => $movie->id]) }}">{{ $movie->title }}</a></td>
                                 <td class = "genre">
                                     @foreach ($movie->genres as $genre)
                                         @if ($loop->last)

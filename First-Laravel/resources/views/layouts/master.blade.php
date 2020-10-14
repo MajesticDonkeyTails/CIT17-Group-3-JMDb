@@ -55,7 +55,7 @@
                             <li><a href = "https://www.metacritic.com/" class = "sub-link">Metacritic</a></li>
                         </ul>
                     </li>
-                    <li><a href = "#" class = "link">About</a></li>
+                    <li><a href = "{{ url('/about-us') }}" class = "link">About</a></li>
                 </ul>
                 <!--Log in and sign up-->
                 <div class = "account-options">
@@ -65,6 +65,9 @@
                 </div>
                 <!--Footer-->
                 <div class = "footer">
+                    THIS WEBSITE IS FOR EDUCATIONAL PURPOSES ONLY.
+                    <br/>
+                    <br/>
                     Copyright &copy;
                     <script>document.write(new Date().getFullYear());</script>
                     All rights reserved

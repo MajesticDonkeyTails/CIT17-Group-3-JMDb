@@ -50,3 +50,9 @@ Changelog: October 9, 2020
 		- Re-implemented genres to movie tables.
 		- Drop-down and radio inputs with their default values are reworked.
 	- Genre edit for existing movies is now implemented.
+
+Changelog: October 15, 2020
+	- "About" page reimplemented.
+	- Added a general "view" mode for each movie record (similar to "edit" mode).
+	- Genre can now be added while making new movie records (previously only "edit" mode can do that).
+	- Minor layout changes.

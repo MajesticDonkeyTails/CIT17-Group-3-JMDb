@@ -11,6 +11,7 @@
                 <div class = "col-lg-12">
                     <h1>Explore Entertainment</h1>
                     <h5>Just your other average internet movie database clone</h5>
+                    <h5>Please read notes about the website <a href = "{{ url('/about-us') }}" class = "link">here</a>.</h5>
                 </div>
             </div>
         </div>
@@ -29,9 +30,9 @@
                     <a href = "#" class = "news-link">
                         <img src = "{{ url('./img/bg-004.jpg') }}">
                         <div class = "news-body">
-                            <h6>News 1 →</h6>
-                            <p>October 31, 2020</p>
-                            <p>Sample description text with no context.</p>
+                            <h6>Placeholder News 1 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
                         </div>
                     </a>
                 </div>
@@ -40,9 +41,9 @@
                     <a href = "#" class = "news-link">
                         <img src = "{{ url('./img/bg-004.jpg') }}">
                         <div class = "news-body">
-                            <h6>News 2 →</h6>
-                            <p>October 31, 2020</p>
-                            <p>Sample description text with no context.</p>
+                            <h6>Placeholder News 2 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
                         </div>
                     </a>
                 </div>
@@ -51,9 +52,9 @@
                     <a href = "#" class = "news-link">
                         <img src = "{{ url('./img/bg-004.jpg') }}">
                         <div class = "news-body">
-                            <h6>News 3 →</h6>
-                            <p>October 31, 2020</p>
-                            <p>Sample description text with no context.</p>
+                            <h6>Placeholder News 3 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
                         </div>
                     </a>
                 </div>
@@ -62,21 +63,13 @@
                     <a href = "#" class = "news-link">
                         <img src = "{{ url('./img/bg-004.jpg') }}">
                         <div class = "news-body">
-                            <h6>News 4 →</h6>
-                            <p>October 31, 2020</p>
-                            <p>Sample description text with no context.</p>
+                            <h6>Placeholder News 4 →</h6>
+                            <p>January 1, 2021</p>
+                            <p>Sample description text with no context. This is a placeholder</p>
                         </div>
                     </a>
                 </div>         
             </div>
-        </div>
-    </div>
-
-    <!-- Upcoming -->
-    <div id = "upcoming" class = "container-fluid">
-        <div class = "container news-header">
-            <h4>Upcoming Movies |</h4>
-            <a href = "#">See movies of this month →</a>
         </div>
     </div>
 

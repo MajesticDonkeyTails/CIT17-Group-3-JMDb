@@ -20,7 +20,12 @@ class MoviesController extends Controller {
         
         return view('movies.index', compact('movies', 'genres'));
     }
-    public function indexCreate () {return view('movies.create');}
+    public function indexCreate () {
+        //Genre list
+        $genresUnchecked = $this->genreList();
+        //Return view
+        return view('movies.create', compact('genresUnchecked'));
+    }
     public function indexEdit ($id) {
         //Selected movie and its genres
         $movie = Movie::findOrFail($id);
@@ -35,7 +40,7 @@ class MoviesController extends Controller {
         return view('movies.edit', compact('movie', 'genres', 'genresChecked', 'genresUnchecked'));
     }
     
-    //CREATE: (pending user accessibility)
+    //CREATE
     public function create() {
         //Validate
         $validated_fields = request()->validate([
@@ -45,7 +50,8 @@ class MoviesController extends Controller {
             'date-day' => 'required',
             'runtime' => 'required',
             'age-rating' => 'required',
-            'plot' => 'required'
+            'plot' => 'required',
+            'genre' => 'nullable'
         ]);
         //Add user to database
         $movie = Movie::create([
@@ -55,11 +61,15 @@ class MoviesController extends Controller {
             'age_rating' => $validated_fields['age-rating'],
             'plot' => $validated_fields['plot']
         ]);
+        //Record new checked genres
+        foreach ($validated_fields['genre'] as $record) {
+            Genre::create(['movie_id' => $movie->id, 'genre' => $record]);
+        }
         //Redirect
         return redirect('/movies');
     }
     
-    //EDIT: (pending user accessibility)
+    //EDIT
     public function edit($id) {
         //Validate
         $validated_fields = request()->validate([
@@ -110,7 +120,7 @@ class MoviesController extends Controller {
         return redirect('/movies');
     }
     
-    //REMOVE: (pending user accessibility, also add prompt for removal)
+    //REMOVE
     public function remove($id) {
         //Delete
         $delete = Movie::where('id', $id)->delete();
@@ -118,4 +128,18 @@ class MoviesController extends Controller {
         return redirect('/movies');
     }
     
+    //VIEW (shares with "edit" code)
+    public function view ($id) {
+        //Selected movie and its genres
+        $movie = Movie::findOrFail($id);
+        //Filter checked genres
+        $genresChecked = array ();
+        foreach(Genre::where('movie_id', '=', $id)->get('genre') as $genre) {
+            array_push($genresChecked, $genre->genre);
+        }
+        //Filter unchecked genres
+        $genresUnchecked = array_diff($this->genreList(), $genresChecked);
+        //Return view
+        return view('movies.view', compact('movie', 'genres', 'genresChecked', 'genresUnchecked'));
+    }
 }

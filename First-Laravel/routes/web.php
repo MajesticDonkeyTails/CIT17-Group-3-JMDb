@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 //Roots
     Route::get('/', function () {return view('home');});
+    Route::get('/about-us', function () {return view('about-us');});
 
 //MOVIES
     Route::get('/movies', 'MoviesController@index');
@@ -25,6 +26,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/movies/edit/{id}', 'MoviesController@indexEdit');
     Route::post('/movies/edit/{id}', 'MoviesController@edit');
     Route::post('/movies/remove/{id}', 'MoviesController@remove');
+    Route::get('/movies/view/{id}', 'MoviesController@view');
 
 //LOGIN, SIGN UP, AND USERS
     Route::get('/login', 'AuthenticationsController@indexLogin')->name('login');
@@ -51,6 +53,3 @@ use Illuminate\Support\Facades\Route;
     Route::post('/users/delete/{id}', function () {
         return redirect('/sign-up');
     });
-
-//UNUSED
-    Route::get('/about-us', 'PagesController@aboutUs');
